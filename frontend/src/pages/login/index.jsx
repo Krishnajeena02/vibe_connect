@@ -51,7 +51,7 @@ const LoginComponent = () => {
     dispatch(loginUser({ email, password }))
   }
    const handleGoogleLogin = () => {
-    window.location.href = `https://Vibe-connect.onrender.com/api/auth/google`;
+    window.location.href = `https://vibe-connect-3.onrender.com/api/auth/google`;
  // backend endpoint
   };
 
