@@ -6,6 +6,7 @@ import styles from './styles.module.css'
 import { loginUser, registerUser } from '@/config/redux/action/authAction/index'; // <-- fix this line
 import { emptyMessage } from '@/config/redux/reducer/authReducer';
 import { useRouter } from 'next/router'
+import  BASE_URL from '@/config/index'
 
 const LoginComponent = () => {
   const router = useRouter()
@@ -50,7 +51,7 @@ const LoginComponent = () => {
     dispatch(loginUser({ email, password }))
   }
    const handleGoogleLogin = () => {
-    window.location.href = `${BASE_URL}/api/auth/google`;
+    window.location.href = `https://Vibe-connect.onrender.com/api/auth/google`;
  // backend endpoint
   };
 
