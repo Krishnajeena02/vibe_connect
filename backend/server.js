@@ -18,7 +18,7 @@ const app = express();
 const server = http.createServer(app);
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: "https://vibe-connect-roan.vercel.app/",
+  origin: process.env.FRONTEND_URL,
   credentials: true,
 }));
 app.use(express.json());
@@ -44,6 +44,17 @@ const start = async () => {
 console.log("mongodb connected")
 }
 
+
+// In user.routes.js
+app.get('/user/profile/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const profile = await User.findById(id); // or User.findOne({_id: id})
+    res.status(200).json({ profile });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch profile" });
+  }
+});
 
 server.listen(9090, ()=>{
     console.log("app is running")
