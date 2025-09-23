@@ -1,0 +1,55 @@
+ POST http://localhost:9090/register HTTP/1.1
+ content-Type: application/json
+
+ {
+     
+  "name": "rahuld",
+  "username":"rahul0d2",
+  "email": "rahudl@email.com",
+  "password": "radhul@123"
+
+
+ }
+###
+
+ 
+
+  POST http://localhost:9090/login HTTP/1.1
+ content-Type: application/json
+
+{
+    "email":"krishna@email.com",
+    "password":"yourpassword"
+}
+
+###
+
+
+GET  http://localhost:9090/get_user_and_profile HTTP/1.1
+ content-Type: application/json
+
+{
+   "token":"5511d7df98877614764efc3dd59d9fb20fc62a61d1f949313031e9f8f0e92ac3"
+}
+
+###
+POST   http://localhost:9090/update_profile_data HTTP/1.1
+ content-Type: application/json
+
+{
+   "token":"e72630164f000370234745fd35b977d74fff3890fa1dae2fcce173d487fd3763",
+"bio":" hey i am neha and i am a frontend developer i create stunning design and develop responsive websites",
+"currentPost":"fresher",
+"pastWork":[
+       {
+           "company": "TechCorp",
+           "position": "Software Engineer",
+           "years": "2 years"
+       }
+       
+
+]
+}
+
+###
+GET    http://localhost:9090/user/get_all_user HTTP/1.1

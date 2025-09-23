@@ -1,0 +1,401 @@
+.createpostContainer{
+    display: flex;
+    height: 10svh;
+    width: 80%;
+    gap: 1.3rem;
+    margin-top: 0.5rem;
+    align-items: center;
+  background-color:var(--createpostcontainer-bg);
+padding-inline: 1.2rem;
+border-radius: 30px 0;
+}
+
+.scrollComponent{
+      display: flex;
+  flex-direction: column;  /* Stack children vertically */
+  align-items: center; 
+  
+  background-color:var(--scrollcomponent-bg);
+   /* background-color: */
+}
+
+.createpostContainer > textarea{
+    width: 100%;
+}
+
+.userProfile{
+    height: 60%;
+    border-radius: 50%;
+}
+.fab{
+    display: flex;
+    justify-content: center;
+       background-color:#4F9AFF;
+
+    padding: 0.3rem;
+    border-radius:50% ;
+    cursor: pointer;
+}
+.fab >.add{
+     width: fit-content;
+  height: 30px;
+  color: white;
+}
+
+.textArea{
+    width: 80%;
+    height: 70%;
+    padding-inline: 1.5rem;
+    border-radius: 10px;
+    padding-block: 0.8rem;
+    outline: none;
+    border: 1px solid silver;
+}
+
+.uploadBtn{
+    width: fit-content;
+    padding-inline: 1.7rem;
+    padding-block: 0.5rem;
+    line-height: 20px;
+    border-radius: 10px;
+    background-color: #6E77EE;
+    position: relative;
+     right: 0;
+     cursor: pointer;
+}
+.postContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.card{
+    margin-top: 1.5rem;
+     width: 100%;
+  display: flex;
+  /* border: 1px solid black; */
+  flex-direction: column;
+  border-radius: 30px   ;
+  /* border: 1px solid silver; */
+  padding: 1rem;
+  /* background-color: #f5f5f5; */
+  background-color:var(--card-bg);
+   /* background-color: #121212; */
+  /* position: relative; */
+  
+}
+
+
+
+.card_profileContainer{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.2rem;
+    padding-right: 3.4rem;
+}
+
+.userprofile{
+    width: 80px;
+    height: 80px;
+    margin-top:-15px;
+    /* position: absolute; */
+    border-radius: 50%;
+
+
+}
+
+.commentOwner{
+    color:var( --detail-color)
+}
+
+.name {
+    display: inline-flex;
+    font-weight: bold;
+  align-items: center;
+  gap: 5px; /* spacing between name and badge */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.badgeIcon {
+  position: relative;
+  top: 2px; /* raise the badge slightly */
+    color: #4F9AFF;
+
+}
+
+
+.card_image{
+    width: 100%;
+    padding-top: 1rem;
+    width: fit-content;
+    overflow: hidden;
+}
+.card_image video {
+  /* aspect-ratio: 9 / 16; Instagram's vertical video ratio */
+  /* max-height: 900px;   Prevent it from going taller than Instagram Reels */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;  /* Match card style */
+}
+
+
+.card_image>img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.optionsContainer{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0.6rem;
+}
+.option{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    cursor: pointer;
+
+    /* color:white */
+    /* outline:1px solid white; */
+    /* background-color: white;
+    border-radius: 50%; */
+}
+
+.option>svg{
+    width: 10%;
+    height: 100%;
+    min-width: 1rem;
+    fill: var(--svg-fill);
+}
+
+.option {
+  stroke: black;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+  
+}
+
+
+
+.option>svg:active{
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.commentContainer{
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color:var(--commentcontainer-bg);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.allCommentsContainer{
+    background-color: black;
+
+    /* width: 40vw;
+     */
+     min-width:30svw;
+    height: 80vh;
+    max-width:1120px;
+    background-color: var(--allcommentcontainer-bg);
+    border-radius: 10px;
+    position: relative;
+    padding: 1.2rem;
+
+overflow-y: auto;
+
+}
+/* .postCommentContainer{
+    background-color: black;
+    position: sticky;
+    bottom: -2rem;
+    left:1.2rem;
+    width: 80vw;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding-left: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    margin-left: -1rem;
+    
+
+} */
+
+.postCommentContainer{
+    position: sticky;
+    bottom: -1.2rem;
+    background-color: var(--postcommentcontainer-bg);
+    left:1.2rem;
+    width: 100%;
+    height:80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 3rem;
+    padding-bottom: 0;
+    
+
+}
+
+.postCommentContainer>input{
+    flex:0.9;
+    padding-inline: 1.5rem;
+    padding-block: 1.2rem;
+    border: none;
+    background-color:rgb(228, 228, 288);
+    border-radius: 10px;
+  
+    outline: none;
+}
+
+.postCommentContainer>input:focus{
+    border: 1px solid silver;
+}
+
+.postCommentContainer>.comment_btn{
+    flex: 0.1;
+    width: fit-content;
+      background-color:#4F9AFF;
+    padding: 1.2rem;
+    border-radius: 30px 0;
+    /* margin-right: -0.5rem; */
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    /* margin-inline-start: 4rem; */
+}
+.createdAt{
+    width:100%
+}
+@media screen and (max-width:600px){
+    .allCommentsContainer{
+        width:85svw;
+       
+    }
+    
+    .scrollComponent{
+  min-width:fit-content;
+
+    }
+    
+    .card{
+        margin-right: 1rem;
+        overflow: hidden;
+        min-width: 300px;
+    }
+    .createdAt{
+        display: block;
+        white-space:nowrap;
+        font-size: 10px;
+        flex-direction: column;
+
+    }
+   
+
+   
+    
+}
+
+
+
+.mediaModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.mediaModal {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+}
+
+.mediaModalImage {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+  /* object-fit: cover; */
+}
+.mediaModalVideo {
+  width: auto;
+  height: 80vh;         /* Tall video */
+  max-width: 500px;     /* Avoid being too wide */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  object-fit: cover;    /* Fill space while cropping slightly */
+  /* background-color: black; */
+}
+
+
+.downloadButton {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #6E77EE;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comment{
+    background-color: var(--comment-bg);
+    /* opacity: 0.7; */
+    /* filter:blur(1px) ; */
+
+    max-width: 300px;
+    /* min-width: min-content; */
+    height: auto;
+    color: var(--comment-color);
+    padding: 1rem;
+    border-radius:30px 0;
+    margin-top: 1rem;
+}
+
+
+
+.delete_btn {
+  display: flex;
+  justify-content:flex-end; /* aligns to the right */
+  align-items: center;
+  /* margin-top: 3rem; */
+  position: relative; /* needed if you want absolute children relative to it */
+}

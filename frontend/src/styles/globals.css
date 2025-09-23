@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*{
+ font-family: "Outfit", sans-serif;
+}
+
+html.light {
+  --bg-color: white;
+  --text-color: black;
+}
+
+html.dark {
+  --bg-color: #121212;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.theme-switcher-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  cursor: pointer;
+  background: transparent;
+  font-size: 14px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html.light .theme-switcher-btn {
+  background-color: #eee;
+  color: black;
+}
+
+html.dark .theme-switcher-btn {
+  background-color: #222;
+  color: white;
+}
+
+ html.light {
+  --bg-color: white;
+  --text-color: black;
+  --card-bg: white; 
+  --leftbar-boxshadow:10px 0 10px #ffff;
+        --scrollcomponent-bg:      #f3f4f4;
+  /* --svg-fill:black; */
+  --createpostcontainer-bg:#f3f4f4;
+      --extracontainer-bg  :  #f3f4f4;
+  --commentcontainer-bg:rgba(0, 0, 0, 0.7);
+  --allcommentcontainer-bg:white;
+  --comment-bg: rgba(0, 0, 0, 0.9);
+ --comment-color:white;
+  --postcommentcontainer-bg:white;
+    --phonenavbar-bg:white;
+
+
+
+} 
+
+html.dark {
+  --bg-color: black;
+  --svg-fill:white;
+  --text-color: white;
+  --card-bg: black; /* Dark mode card background */
+  --scrollcomponent-bg:#1e1e1e ;
+  --leftbar-boxshadow:0 0 10px #0000;
+  --createpostcontainer-bg:black;
+  --extracontainer-bg:#1e1e1e;
+  --detail-color:white;
+  --allcommentcontainer-bg:black;
+  /* --commentconatinertext-color:white; */
+  --commentcontainer-bg:rgba(255, 255, 255, 0.7);
+  --comment-bg: rgba(255, 255, 255, 0.9);
+  --comment-color:black;
+  --postcommentcontainer-bg:black;
+  --phonenavbar-bg:black;
+
+}

@@ -1,0 +1,142 @@
+.container{
+    /* padding: 1.2rem; */
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+    padding-bottom: 1rem;
+
+    /* background-color: rgb(230, 230, 230); */
+}
+
+
+.backDropContainer{
+position: relative;
+}
+.backDropImage{
+     width: 100%;
+    height: 35vh;
+background-size: cover;
+background-repeat: no-repeat;
+border: none;
+outline: none;
+/* opacity: 0.9; */
+filter: blur(1.06px);
+/* position: relative; */
+border-radius: 20px;
+}
+.profileDetail_Container{
+    position: relative;
+}
+.profileDetail_Container>img{
+ width: 10em;
+  height: 10em;
+    /* height: auto; */
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -5.8rem;
+    left: 7%;
+    text-align: center;
+}
+
+.profileDetail_Container{
+    padding-top: 6.2rem;
+}
+
+.postCard{
+     display: flex;
+    width: 100%;
+    padding-top: 1.4rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.card_profileContainer{
+      padding-top: 1rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: fit-content;
+    padding-inline: 2.5rem;
+    padding-block: 1rem;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px  15px rgb(175, 175, 175);
+
+}
+.card_profileContainer>img{
+    width: 8.5rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.connect_btn{
+    padding-inline: 0.9rem;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color:#4F9AFF ;
+}
+.connect_btn:active{
+    transform:scale(0.8)
+}
+
+.connected_btn{
+        padding-inline: 0.9rem;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 1rem;
+    border: 1px solid #4F9AFF;
+    color:#4F9AFF;
+    background-color:rgb(242, 242, 242);
+}
+
+
+
+/* .postCard{
+     display: flex;
+    width: 100%;
+    padding-top: 1.4rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+} */
+
+
+.recentPostsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 3rem;
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  height: fit-content;
+  
+}
+.profileDetail_flex{
+    display: flex;
+    gap: 1rem;
+    /* flex-direction: row; */
+}
+@media only screen and (max-width:600px) {
+    .profileDetail_flex{
+        flex-direction: column;
+    }
+       .recentPostsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding-top: 1rem;
+  height: auto;
+}
+    
+}
