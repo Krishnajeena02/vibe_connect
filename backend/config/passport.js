@@ -2,9 +2,8 @@ import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import User from '../models/user.model.js';
 import dotenv from 'dotenv';
-import path from 'path';
 
-dotenv.config({ path: path.resolve('../.env') }); // adjust path to reach the .env
+dotenv.config()
 
 passport.use(
   new GoogleStrategy(
