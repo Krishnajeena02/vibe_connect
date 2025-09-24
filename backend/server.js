@@ -19,7 +19,7 @@ const server = http.createServer(app);
 app.use(express.urlencoded({ extended: true }));
 const allowedOrigins = [
   "http://localhost:3000", // local
-  process.env.FRONTEND_URL,
+  "https://vibe-connect-roan.vercel.app", // your Vercel production frontend
 ];
 
 app.use(cors({
