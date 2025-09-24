@@ -51,7 +51,7 @@ const LoginComponent = () => {
     dispatch(loginUser({ email, password }))
   }
    const handleGoogleLogin = () => {
-    window.location.href = `${BASE_URL}/api/auth/google`;
+    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/auth/google`;
  // backend endpoint
   };
 
