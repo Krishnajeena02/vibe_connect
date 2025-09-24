@@ -20,10 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(cors({
-  origin:  [
- "http://localhost:3000", // local
-  "https://vibe-connect-roan.vercel.app",
-  ]
+  origin:
+  "*"
+ 
     
   ,
   credentials: true,
