@@ -17,19 +17,15 @@ import authRoutes from'./routes/auth.routes.js';
 const app = express();
 const server = http.createServer(app);
 app.use(express.urlencoded({ extended: true }));
-const allowedOrigins = [
-  "http://localhost:3000", // local
-  "https://vibe-connect-roan.vercel.app", // your Vercel production frontend
-];
+
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin:  [
+ "http://localhost:3000", // local
+  "https://vibe-connect-roan.vercel.app",
+  ]
+    
+  ,
   credentials: true,
 }));
 app.use(express.json());
