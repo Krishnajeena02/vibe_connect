@@ -182,7 +182,7 @@ const Dashboard = () => {
                                 </video>
                               ) : (
                                 <img
-                                  src={`${BASE_URL}/${post.media}`}
+                                  src={post.media}
                                   alt="media"
                                   style={{ width: "100%", borderRadius: "10px" }}
                                 />
