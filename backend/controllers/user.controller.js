@@ -3,35 +3,9 @@ import Profile from "../models/profile.model.js";
 import ConnectionRequest from "../models/connection.model.js";
 import bcrypt from "bcrypt";
 import crypto from "crypto";
-import PDFDocument from "pdfkit";
-import fs from 'fs';
+// import cloudinary from "../utils/cloudinary.js"; 
 
-const convertUserDataTOPDF = async (userData)=>{
-    const doc  =  new PDFDocument(userData);
 
-    const outputPath = crypto.randomBytes(32).toString("hex") + ".pdf";
-    const stream =  fs.createWriteStream("uploads/" + outputPath);
-    doc.pipe(stream);
-    doc.image(`uploads/${userData.userId.profilePicture}`, {align: "center", width:100});
-    doc.moveDown(8);
-    doc.fontSize(14).text(`Name: ${userData.userId.name}`);
-    doc.fontSize(14).text(`Username: ${userData.userId.username}`);
-    doc.fontSize(14).text(`Email: ${userData.userId.email}`);
-    doc.fontSize(14).text(`Bio: ${userData.bio}`);
-    doc.fontSize(14).text(`Current Post: ${userData.currentPost}`);
-    doc.fontSize(14).text("Past Work");
-    userData.pastWork.forEach((work,index) => {
-    doc.fontSize(14).text(`Company Name: ${work.company}`);
-    doc.fontSize(14).text(`Position: ${work.position}`);
-    doc.fontSize(14).text(`Years: ${work.years}`);
-
-    console.log("userId Data:", userData.userId);
-    });
-    // console.log(userData)
-    doc.end();
-    return outputPath;
-
-}
 
 
 
@@ -131,10 +105,10 @@ export const uploadProfilePicture = async (req,res)=>{
         return res.status(404).json({message:"user not found"})
     }
 
-    user.profilePicture=req.file.filename;
+    user.profilePicture=req.file.path;
     await user.save();
 
-    return res.json({message:"profile picture uploaded"})
+    return res.json({message:"profile picture uploaded",url: req.file.path})
 }
 catch(error){
     return res.status(500).json({error :error.message});
@@ -240,21 +214,6 @@ catch(error){
 }
 
 
-export const downloadProfile = async (req,res)=>{
-    try{
-        const user_id = req.query.id;
-
-        const userProfile = await  Profile.findOne({userId: user_id})
-        .populate("userId" , "name email username profilePicture")
-   let outputPath = await  convertUserDataTOPDF(userProfile);
-
-   return res.json({"message":outputPath});
-    }
-
-    catch(error){
-        return res.status(500).json({error: error.message})
-    }
-}
 
 
 export const sendConnectionRequest = async (req,res)=>{

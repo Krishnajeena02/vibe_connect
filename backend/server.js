@@ -18,6 +18,7 @@ const app = express();
 const server = http.createServer(app);
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static("uploads"))
 
 app.use(cors({
   origin:
@@ -42,7 +43,6 @@ app.use('/api/auth', authRoutes);
 
 app.use(userRoutes);
 app.use(postRoutes);
-app.use(express.static("uploads"))
 
 
 const start = async () => {

@@ -97,7 +97,7 @@ const DashBoardLayout = ({ children }) => {
                     {authState.all_profiles_fetched && Array.isArray(authState.all_users) && (
                         authState.all_users.slice(0, 10).map(profile => (
                             <div key={profile._id}>
-                                <p>{profile.userId.name}</p>
+                                <p>{profile?.userId?.name}</p>
 
                             </div>
                         ))

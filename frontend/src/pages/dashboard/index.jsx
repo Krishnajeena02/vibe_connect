@@ -131,7 +131,13 @@ const Dashboard = () => {
                     <div className={styles.card_profileContainer} >
 
                       <img onClick={() => {
-                        router.push("/profile")
+                         if(post.userId?._id === authState.user?.userId?._id){
+                router.push("/profile")
+              }
+              else{
+
+                router.push(`/view_profile/${user.userId.username}`)
+              }
 
                       }} className={styles.userprofile} width="50px" src={`${BASE_URL}/${post.userId.profilePicture}`} alt="profile" />
                       <div>
