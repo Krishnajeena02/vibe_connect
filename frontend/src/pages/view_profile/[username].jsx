@@ -76,11 +76,11 @@ useEffect(() => {
     <DashBoardLayout>
   <div className={styles.container}>
     <div className={styles.backDropContainer}>
-                  <img className={styles.backDropImage} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="" />
+                  <img className={styles.backDropImage} src={userProfile.userId.profilePicture} alt="" />
       
     </div>
     <div className={styles.profileDetail_Container}>
-                 <img className={styles.img} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="" />
+                 <img className={styles.img} src={userProfile.userId.profilePicture} alt="" />
 
       <div className={styles.profileDetail_flex} style={{display:"flex", gap:"0.7rem"}}>
         <div style={{flex:"0.8"}}>
@@ -128,7 +128,7 @@ useEffect(() => {
                 <div className={styles.card}>
                   <div className={styles.card_profileContainer}>
                     
-                    {post.media !== "" ? <img style={{borderRadius:"10px"}} src={`${BASE_URL}/${post.media}`} alt='' ></img>: <div > </div> }
+                    {post.media !== "" ? <img style={{borderRadius:"10px"}} src={post.media} alt='' ></img>: <div > </div> }
                      </div> 
                      <p style={{fontSize:"0.8rem",textAlign:"center",padding:"0.6rem",width:"100%", borderRadius:"0 10px 20px 10px", backgroundColor:"#DEE0EC"}}><b>Caption: </b> {post.body}</p>
 
