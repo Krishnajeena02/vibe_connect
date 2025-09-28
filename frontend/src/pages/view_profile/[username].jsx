@@ -76,11 +76,11 @@ useEffect(() => {
     <DashBoardLayout>
   <div className={styles.container}>
     <div className={styles.backDropContainer}>
-                  <img className={styles.backDropImage} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="" />
+                  <img className={styles.backDropImage} src={userProfile.userId.profilePicture} alt="" />
       
     </div>
     <div className={styles.profileDetail_Container}>
-                 <img className={styles.img} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="" />
+                 <img className={styles.img} src={userProfile.userId.profilePicture} alt="" />
 
       <div className={styles.profileDetail_flex} style={{display:"flex", gap:"0.7rem"}}>
         <div style={{flex:"0.8"}}>

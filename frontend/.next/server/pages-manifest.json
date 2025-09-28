@@ -3,6 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/dashboard": "pages/dashboard.js",
-  "/profile": "pages/profile.js",
-  "/login": "pages/login.js"
+  "/myConnection": "pages/myConnection.js",
+  "/login": "pages/login.js",
+  "/search": "pages/search.js"
 }

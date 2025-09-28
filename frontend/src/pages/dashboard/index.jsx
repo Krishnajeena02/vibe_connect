@@ -139,7 +139,7 @@ const Dashboard = () => {
                 router.push(`/view_profile/${user.userId.username}`)
               }
 
-                      }} className={styles.userprofile} width="50px" src={`${BASE_URL}/${post.userId.profilePicture}`} alt="profile" />
+                      }} className={styles.userprofile} width="50px" src={post.userId.profilePicture}} alt="profile" />
                       <div>
                         <div style={{ display: "flex", gap: "1.2rem", justifyContent: "space-between", alignItems: "center" }}>
                           <p className={styles.name}>{post.userId.name}<BadgeCheck className={styles.badgeIcon} width={"16px"} /></p>
@@ -165,7 +165,7 @@ const Dashboard = () => {
                           {post.media && (
                             <div
                               className={styles.card_image}
-                              onClick={() => handleOpenMedia(`${BASE_URL}/${post.media}`)}
+                              onClick={() => handleOpenMedia({post.media})}
                               style={{ cursor: "pointer" }}
                             >
                               {post.media?.match(/\.(mp4|webm|ogg)$/i) ? (
@@ -177,7 +177,7 @@ const Dashboard = () => {
                                   width="100%"
                                   style={{ borderRadius: "10px" }}
                                 >
-                                  <source src={`${BASE_URL}/${post.media}`} type="video/mp4" />
+                                  <source src={post.media} type="video/mp4" />
                                   Your browser does not support the video tag.
                                 </video>
                               ) : (
