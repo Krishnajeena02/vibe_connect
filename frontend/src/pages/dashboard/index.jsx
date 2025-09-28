@@ -161,11 +161,11 @@ const Dashboard = () => {
 
                         <p style={{ paddingTop: "1rem" }}>{post.body}</p>
 
-                        <div className={styles.card_image} onClick={() => handleOpenMedia(`${BASE_URL}/${post.media}`)} style={{ cursor: "pointer" }}>
+                        <div className={styles.card_image} onClick={() => handleOpenMedia(post.media)} style={{ cursor: "pointer" }}>
                           {post.media && (
                             <div
                               className={styles.card_image}
-                              onClick={() => handleOpenMedia({post.media})}
+                              onClick={() => handleOpenMedia(post.media)}
                               style={{ cursor: "pointer" }}
                             >
                               {post.media?.match(/\.(mp4|webm|ogg)$/i) ? (
