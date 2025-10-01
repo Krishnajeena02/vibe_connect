@@ -28,20 +28,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/dashboard.js"
     ],
-    "/myConnection": [
+    "/view_profile/[username]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/myConnection.js"
-    ],
-    "/profile": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/profile.js"
-    ],
-    "/search": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/search.js"
+      "static/chunks/pages/view_profile/[username].js"
     ]
   },
   "ampFirstPages": []
