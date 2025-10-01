@@ -99,8 +99,7 @@ const Dashboard = () => {
 
             <img className={styles.userProfile}
               width="50px"
-              src={
-                `${BASE_URL}/${userId?.profilePicture}`}
+              src={userId?.profilePicture}
               alt="profile"
             />
             <textarea onChange={(e) => { setPostContent(e.target.value) }} value={postContent} placeholder='Write Here' className={styles.textArea} name="" id=""></textarea>
@@ -139,7 +138,9 @@ const Dashboard = () => {
                 router.push(`/view_profile/${user.userId.username}`)
               }
 
-                      }} className={styles.userprofile} width="50px" src={post.userId.profilePicture} alt="profile" />
+                      }} className={styles.userprofile} width="50px" src={post.userId.profilePicture === "default.jpg"
+      ? "/images/default.jpg"
+      : post.userId.profilePicture} alt="profile" />
                       <div>
                         <div style={{ display: "flex", gap: "1.2rem", justifyContent: "space-between", alignItems: "center" }}>
                           <p className={styles.name}>{post.userId.name}<BadgeCheck className={styles.badgeIcon} width={"16px"} /></p>

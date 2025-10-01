@@ -203,6 +203,7 @@ try{
     const profiles =  await Profile.find().populate("userId", "name username email profilePicture ");
 
     return res.json({profiles})
+    
 
 
 

@@ -14,10 +14,12 @@ const SearchPage = () => {
   const [filterData, setFilterData] = useState([]);
 
   useEffect(() => {
+     
     dispatch(getAllUser());
     dispatch(getAboutUser());
   }, []);
 useEffect(() => {
+    
   setFilterData(authState.all_users);
 }, [authState.all_users]);
   
@@ -41,7 +43,8 @@ useEffect(() => {
         </div>
 
         <div  className={styles.allusersProfile}>
-          {filterData.map((user) => (
+          {filterData  .filter(user => user.userId)
+  .map((user) => (
             <div  onClick={()=>{
               if(user.userId?._id === authState.user?.userId?._id){
                 router.push("/profile")
@@ -53,7 +56,9 @@ useEffect(() => {
             }} key={user._id} className={styles.userCard}>
               <img
                 className={styles.userCard_image}
-                src={`${BASE_URL}/${user?.userId?.profilePicture}`}
+                src={user.userId.profilePicture === "default.jpg"
+      ? "/images/default.jpg"
+      : user.userId.profilePicture}
                 alt="profile"
               />
               <div>

@@ -84,8 +84,8 @@ const Profile = () => {
           <div className={styles.backDropContainer} >
             <img className={styles.backDropImage} src={
               userProfile.userId.profilePicture
-                ? `${BASE_URL}/${userProfile.userId.profilePicture}`
-                : "/images/default.jpg"
+                ? userProfile.userId.profilePicture
+                : "/default.jpg"
             } alt="" />
 
             <label htmlFor='profilePictureUpload' className={styles.backDrop_overlay}>
@@ -94,8 +94,8 @@ const Profile = () => {
             <input onChange={(e) => updateProfilePicture(e.target.files[0])} type="file" hidden id="profilePictureUpload" />
             <img className={styles.img} src={
               userProfile.userId.profilePicture?.trim()
-                ? `${BASE_URL}/${userProfile.userId.profilePicture}`
-                : "/images/default.jpg"
+                ? userProfile.userId.profilePicture
+                : "images/default.jpg"
             } alt="" />
 
 

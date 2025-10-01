@@ -28,8 +28,8 @@ const dispatch = useDispatch();
               router.push("/profile")
             }} style={{ borderRadius: "50%", border:"none", cursor: "pointer", width: "40px", height: "40px",  }}
              src={
-    authState.user.userId.profilePicture?.trim()
-      ? `${BASE_URL}/${authState.user.userId.profilePicture}`
+    authState.user.userId.profilePicture?.trim()?
+    authState.user.userId.profilePicture
       : "/images/default.jpg"
   } alt="" />
           
